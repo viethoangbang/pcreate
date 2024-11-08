@@ -1,0 +1,64 @@
+/* Thiết lập bố cục chính */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Chiều cao tối thiểu toàn bộ màn hình */
+    margin: 0;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Căn giữa container và đẩy footer xuống */
+.container {
+    margin-top: 7rem;
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: auto; /* Đẩy footer xuống dưới */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"], button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.output {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #FFD700;
+    text-align: center;
+}
+
+/* Thiết kế footer luôn nằm dưới */
+footer {
+    text-align: center;
+    color: #777;
+    font-size: 0.9em;
+    padding: 10px;
+}
