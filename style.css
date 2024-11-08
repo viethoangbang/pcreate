@@ -9,6 +9,15 @@ body {
     background-color: #1e1e1e;
     color: #fff;
     font-family: Arial, sans-serif;
+
+    /* Hiệu ứng nền dạng lưới */
+    background-image: 
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+    background-blend-mode: overlay;
 }
 
 /* Căn giữa container và đẩy footer xuống */
@@ -22,15 +31,37 @@ body {
 }
 
 h1 {
+    margin-top: 8px;
     text-align: center;
+    font-family: 'Arial', sans-serif; /* Phông chữ cơ bản */
+    font-size: 3em; /* Kích thước chữ vừa phải */
+    font-weight: bold; /* Chữ đậm để nổi bật */
+    color: transparent; /* Ẩn màu chữ để sử dụng gradient */
+    background: linear-gradient(90deg, #ff6a00, #ee0979); /* Gradient màu sắc */
+    -webkit-background-clip: text; /* Cắt nền theo chữ */
+    background-clip: text; /* Cắt nền theo chữ */
     margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Bóng chữ nhẹ hơn */
+    transition: transform 0.3s; /* Hiệu ứng chuyển động */
+}
+
+h1:hover {
+    transform: scale(1.05); /* Phóng to khi di chuột */
 }
 
 .form-group {
     margin-bottom: 15px;
 }
 
-input[type="text"], button {
+input[type="text"] {
+    width: 97%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button {
     width: 100%;
     padding: 10px;
     border: none;
@@ -55,10 +86,50 @@ button:hover {
     text-align: center;
 }
 
+/* Thanh loading */
+.progress-6 {
+    width: 120px;
+    height: 22px;
+    border-radius: 20px;
+    color: #FFD700; /* Màu vàng cho phù hợp với tone tối */
+    border: 2px solid #FFD700;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.progress-6::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: p6 2s infinite;
+}
+
+@keyframes p6 {
+    100% { inset: 0; }
+}
+
 /* Thiết kế footer luôn nằm dưới */
 footer {
     text-align: center;
     color: #777;
     font-size: 0.9em;
     padding: 10px;
+}
+button#copyButton {
+    background-color: #f39c12;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button#copyButton:hover {
+    background-color: #e67e22;
 }

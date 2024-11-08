@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <h1>PCreate</h1>
+        
         <div class="form-group">
             <label for="username">Tên cá nhân (Không dấu, không khoảng cách):</label>
             <input type="text" id="username" placeholder="Nhập tên cá nhân" required>
@@ -26,15 +27,19 @@
         </div>
         
         <button onclick="generatePassword()">Tạo mật khẩu</button>
+
+        <!-- Thanh loading thêm vào đây và ẩn mặc định -->
+        <div class="progress-6" id="loading" style="display: none;"></div>
         
         <div class="output" id="output"></div>
+        <!-- Nút Copy mật khẩu -->
+        <button id="copyButton" onclick="copyPassword()" style="display: none;">Copy mật khẩu</button>
     </div>
     
     <script src="script.js"></script>
     
-<footer>
-    <p>© 2024 PCreate. Được phát triển bởi Pianhan-Vhoangfbg</p>
-</footer>
+    <footer>
+        <p>© 2024 PCreate. Được phát triển bởi Pianhan-Vhoangfbg</p>
+    </footer>
 </body>
-
 </html>
